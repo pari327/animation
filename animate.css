@@ -1,0 +1,168 @@
+body{
+    background:black;
+}
+section{
+    height: 100vh;
+    margin-left: 100px;
+}
+video{
+    object-fit: cover;
+    margin-left: 10px;
+ }
+.heart{
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: relative;
+    bottom:50%;
+    left: 43%;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 1s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes heart{
+    0%{
+        opacity: 0;
+        transform: rotate(-45deg) scale(0.07);
+    }
+    80%{
+        opacity:0.7 ;
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-45deg) scale(0.7);
+    }
+
+}
+.heart::before{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px  -10px 90px #f20044;
+}
+.heart::after{
+    content: '';
+    position:absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+}
+/*.main{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}*/
+.first{
+    position: absolute;
+    top: 45%;
+    left: 17%;
+    color: #ddd;
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+}
+.first span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+
+100%{
+    opacity:1 ;
+    transform: rotateY(0deg);
+    filter: blur(0px);
+}
+}
+.first span:nth-child(1){
+    animation-delay:1s ;
+}
+.first span:nth-child(2){
+    animation-delay: 2s;
+}
+.first span:nth-child(3){
+    animation-delay: 2.5s;
+}
+.first span:nth-child(4){
+    animation-delay:3s ;
+}
+.first span:nth-child(5){
+    animation-delay: 3.5s;
+}
+.first span:nth-child(6){
+    animation-delay: 3.75s;
+}
+
+.second {
+    position: absolute;
+    top: 45%;
+    right: 22%;
+    color: #ddd;
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+}
+.second span{
+    opacity: 0;
+    display: inline-block;
+    animation: anima 1s linear forwards;
+
+}
+@keyframes anima{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+
+100%{
+    opacity:1 ;
+    transform: rotateY(0deg);
+    filter: blur(0px);
+}
+}
+.second span:nth-child(1){
+    animation-delay:3.75s;
+}
+.second span:nth-child(2){
+    animation-delay: 3.5s;
+}
+.second span:nth-child(3){
+    animation-delay:3s ;
+}
+.second span:nth-child(4){
+    animation-delay: 2s;
+}
+.second span:nth-child(5){
+    animation-delay: 1s;
+}
+.hearts{
+    font-size: 23px;
+    font-weight: bold;
+    position: fixed;
+    top: -1vh;
+    left: 0;
+    transform: translateY(0%);
+    animation: fall 1s ease-in infinite;
+
+}
+@keyframes fall{
+    to{
+        transform: translateY(250vh);
+
+    }
+}
